@@ -1,0 +1,11 @@
+<div class="app-continer">
+  <div class="header">
+    <div>Please select bruno masrs album : </div>
+    <app-dropdown (selectedItem)="getSelectedItem($event)"
+                [dropdownObj]="albumsDropdown"></app-dropdown>
+  </div>
+  <div class="content">
+      <app-view [selectedAlbum]="selectedAlbumData"></app-view>
+  </div>
+</div>
+

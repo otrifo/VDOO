@@ -1,0 +1,17 @@
+<div class="view-container">
+  <div *ngIf="selectedAlbum">
+    <h1>Selected Album</h1>
+    <div class="album">
+      <div class="cover">
+        <img [src]="selectedAlbum.albumCover" />
+      </div>
+      <div class="details">
+         <h2>Album name : {{selectedAlbum.name}}</h2>
+         <h2>Release date : {{selectedAlbum.releaseDate}}</h2>
+      </div>
+    </div>
+  </div>
+  <div class="not-selected" *ngIf="!selectedAlbum">
+      Album not selected yet :)
+  </div>
+</div>

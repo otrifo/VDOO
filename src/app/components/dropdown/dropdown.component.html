@@ -1,0 +1,7 @@
+<div>
+  <select (change)="selectItem($event.target.value)">
+      <option value="" disabled>Select a album</option>
+      <option *ngFor="let item of dropdownObj.list;let i = index" 
+      [value]="i" [selected]="item === lastSelected">{{item}}</option>
+  </select>
+</div>
